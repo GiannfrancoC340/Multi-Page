@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../App.css"; // Import styles
 
 function Navbar() {
   return (
     <nav className="navbar">
-      <Link to="/">Home</Link>
-      <Link to="/services">Services</Link>
-      <Link to="/contact">Contact</Link>
+      <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
+      <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")}>Services</NavLink>
+      <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>Contact</NavLink>
     </nav>
   );
 }
